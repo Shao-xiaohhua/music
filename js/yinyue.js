@@ -53,26 +53,17 @@
       $('.xia2 span').html(music[dqindex].name);
       $('.xia3').html(music[dqindex].yanchang);
   })
+
   $('.xia4_2').html(music.length);
 
-   $audio.on('play',function(){
-    $('.caozuo_2').addClass('bofang');
-    $('.bianlv').removeClass('sssssss').eq(dqindex).addClass('sssssss');
-   })
-    $audio.on('pause',function(){
-    $('.caozuo_2').removeClass('bofang');
-   })
+
 
     //下一首
     var $shangyishou=$('.caozuo_1');
     var $xiayishou=$('.caozuo_3');
     $('.caozuo_2').on('click',function(){
       
-        if (dqindex==undefined){
-        dqindex=0;
-      }
-     audio.src=music[dqindex].src;
-     audio.play();
+
          if (audio.paused){
           audio.play();
          }else{
@@ -81,6 +72,13 @@
                  $('.xia2 span').html(music[dqindex].name);
       $('.xia3').html(music[dqindex].yanchang);
    })
+      $audio.on('play',function(){
+          $('.caozuo_2').addClass('bofang');
+          $('.bianlv').removeClass('sssssss').eq(dqindex).addClass('sssssss');
+      })
+      $audio.on('pause',function(){
+          $('.caozuo_2').removeClass('bofang');
+      })
     $xiayishou.on('click',function(){
 
            if (dqindex==undefined){
